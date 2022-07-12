@@ -25,9 +25,13 @@
     --background-color-three: #EEEEEE;
     --background-color-portfolio-button-hover:#2196F3;
     --background-color-portfolio-button:#F5F4FA;
+    --icon-backgroud-color-box:#F5F4FA;
     --borded-heder-color:#ECECEC;
+    --icon-backgroud-color:#2196F3;
     --letter-spacing-one: 0.03em;
     --letter-spacing-main-title: 0.06em;
+    --icon-fill-color:#fff;
+    --icon-base-color:#AFB1B8;
 }
 
 body{
@@ -79,14 +83,23 @@ body{
 .address .link {
     margin-right: 50px;
     color: var(--font-color-text);
+    fill: var(--font-color-text);
 }
-.navi .link:hover, .address .link:hover, .navi .link:focus,
-.address .link:focus{
+.navi .link:hover, 
+.address .link:hover, 
+.navi .link:focus,
+.address .link:focus
+{
     color: var(--font-color-menu-hover);
+    fill: var(--icon-backgroud-color);
+}
+.fb_style{
+   fill: red;
 }
 
 /*Styling for main title and button*/
 .container-one{
+    background-image:linear-gradient(to right,#2F303A66 100%,#2F303A66 100%), url('/images/tlo_naglowka.jpg');
     background-color: var(--background-color-one);
     height: 600px;
     display: flex;
@@ -138,6 +151,8 @@ body{
     letter-spacing: var(--letter-spacing-one);
     color: var(--font-color-headers);
     margin-bottom: 10px;
+    padding-top: 30px;
+    padding-bottom: 10px;
 }
 .four-boxes-text{
     font-size: 14px;
@@ -149,6 +164,97 @@ body{
 .four-boxes .four-boxes-item:nth-last-child(1){
     margin-right: 0px;
 }
+/* Style for icons */
+.icon{
+    background-color: var(--icon-backgroud-color-box);
+    padding: 25px 100px;
+    height: 70px;
+    width: 70px;
+        }
+.four-boxes-icon{
+    height: 70px;
+    width: 70px;
+}
+.icon-address{
+    margin-right: 10px;
+}
+.icons-socials{
+    padding-top: 16px;
+    padding-bottom: 30px;
+   
+}
+.icons-socials-grid{
+    display: flex;
+    justify-content: center;
+}
+.icons-socials-ico{
+    width: 20px;
+    height: 20px;
+    
+}
+.icons-socials-grid-item{
+    display: flex;
+    width: 44px;
+    height: 44px;
+    fill: var(--icon-base-color);
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.icons-socials-grid-item:not(last-child){
+    margin-right: 10px;
+}
+.icons-socials-grid-item:hover, .icons-socials-grid-item:focus{
+    fill: var(--icon-fill-color);
+    background-color: #2196F3;
+    cursor: pointer;
+}
+/* ------- END fo styling icons ------------ */
+
+/* Our clients / Nasi klienci */
+.our-clients{
+    flex-direction: column;
+    align-items: center;
+      
+}
+.our-clients-title{
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--font-color-headers);
+    line-height: 1.38;
+    letter-spacing: var(--letter-spacing-one);
+    padding-bottom: 50px;
+}
+
+.our-clients-items{
+    fill: var(--icon-base-color);
+    
+}
+.our-clients-item{
+    display: inline-flex;
+    justify-items: center;
+    border: 1px solid var(--icon-base-color);
+    border-radius: 4px;
+    padding:14px 25px
+}
+.our-clients-box{
+    display: flex;
+    width: 1200px;
+    justify-content:space-around;
+}
+.our-clients-item:hover, .our-clients-item:focus{
+    fill: var(--icon-backgroud-color);
+    border-color: var(--icon-backgroud-color);
+    cursor: pointer;
+}
+.our-clients-item:last-child{
+    margin-right: 0px;
+}
+.our-clients-item >svg{
+    max-width: 106px;
+    height: 60px;
+}
+/* ----- END Our Clients / Nasi klienci----- */
 /*Styling box "czym się zajmujemy"*/
 
 .box-column{
@@ -225,7 +331,6 @@ body{
     color: var(--font-color-text);
     line-height: 1.1875;
     letter-spacing: var(--letter-spacing-one);
-    padding-bottom: 30px;
 }
 .picture-team{
     max-width: 270px;
@@ -246,6 +351,7 @@ body{
     margin-bottom: 20px;
 }
 .footer-address .footer-item{
+    
     margin-left: 215px;
 }
 .footer-address{
@@ -267,7 +373,6 @@ body{
 .footer-item:nth-child(2){
     margin-top: 9px;
     margin-bottom: 9px;
-    text-decoration: underline;
     letter-spacing: var(--letter-spacing-one);
 }
 
@@ -303,39 +408,47 @@ body{
     
     
 }
-.portfolio-item{
+.portfolio-item {
     flex-basis: calc(100%-60px)/3;
     max-width: 370px;
 
-    border-width: 1px;
-    border-color: var(--background-color-three);
-    border-style: solid;
 
 }
-.picture-portfolio{
+
+.picture-portfolio {
     max-width: 370px;
+    display: block;
 
 }
-.cont-margin{
+
+.cont-margin {
     margin-left: 215px;
     margin-right: 215px;
 }
-.portfolio-item-title{
+
+.portfolio-item-title {
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
     letter-spacing: var(--letter-spacing-main-title);
     color: var(--font-color-headers);
 }
- .portfolio-item-category{
+
+.portfolio-item-category {
     font-size: 16px;
     line-height: 1.875;
     letter-spacing: var(--letter-spacing-one);
     color: var(--font-color-text);
- }
- .portfolio-item-descr-cont{
-    margin: 20px 24px;
- }
+}
+
+.portfolio-item-descr-cont {
+    padding: 20px 24px;
+    border-width: 1px;
+    border-color: var(--background-color-three);
+    border-style: solid;
+    border-top: none;
+}
+
 .space{
     margin-bottom: 94px;
     max-width: 1200px;
@@ -343,3 +456,7 @@ body{
 .section{
     padding: 94px 0px;
 }
+
+/* Style for icons */
+
+/* ---END style for icons-------------- */
