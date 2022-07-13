@@ -99,8 +99,10 @@ body{
 
 /*Styling for main title and button*/
 .container-one{
-    background-image:linear-gradient(to right,#2F303A66 100%,#2F303A66 100%), url("/images/tlo_naglowka.jpg");
+    
+    background-image:linear-gradient(to right,#2F303A66 100%,#2F303A66 100%), url("../images/tlo_naglowka.jpg");
     background-color: var(--background-color-one);
+    
     height: 600px;
     display: flex;
     flex-direction: column;
