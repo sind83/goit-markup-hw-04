@@ -27,7 +27,7 @@
                 <nav>
                     <ul class="menu">
                         <li class="navi">
-                            <a href="index.html" class="link">Agencja</a>
+                            <a href="index.html" class="link active">Agencja</a>
                         </li>
                         <li class="navi">
                             <a href="portfolio.html" class="link">Portfolio</a>
@@ -61,8 +61,24 @@
                 <h1 class="main-title">
                     Efektywne rozwiązania dla waszego biznesu
                 </h1>
-                <button type="button" class="button">Zamów usługę</button>
+                <button type="button" class="button" data-modal-open>
+                    Zamów usługę
+                </button>
+                <div class="modal-backdrop is-hidden" data-modal>
+                    <section class="modal-cont">
+                        <!-- <button
+                            type="button"
+                            class="modal-close"
+                            data-modal-close
+                        > -->
+                            <svg class="modal-close cross-icon" data-modal-close>
+                                <use href="images/icons.svg#icon-cross"></use>
+                            </svg>
+                        </button>
+                    </section>
+                </div>
             </section>
+
             <!--sekcja MAIN - obszar zawierający 4 sekcje opisowe -->
             <div class="section">
                 <section class="container">
@@ -152,6 +168,9 @@
                                 alt="Ręce na klawiaturze"
                                 class="picture"
                             />
+                            <p class="picture-box-image-title">
+                                Aplikacje Komuterowe
+                            </p>
                         </div>
                     </li>
                     <li class="picture-box-item">
@@ -161,6 +180,9 @@
                                 alt="Z telefonem w ręku"
                                 class="picture"
                             />
+                            <p class="picture-box-image-title">
+                                Aplikacje Mobilne
+                            </p>
                         </div>
                     </li>
                     <li class="picture-box-item">
@@ -170,6 +192,9 @@
                                 alt="Ogląda na tablecie"
                                 class="picture"
                             />
+                            <p class="picture-box-image-title">
+                                Rozwiązania Graficzne
+                            </p>
                         </div>
                     </li>
                 </ul>
@@ -522,5 +547,6 @@
                 </li>
             </ul>
         </footer>
+        <script src="../js/modal.js"></script>
     </body>
 </html>
